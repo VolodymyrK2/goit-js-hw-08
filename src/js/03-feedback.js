@@ -38,7 +38,7 @@ function handleSubmit(event) {
 function outputLocalStorage() {
     const savedData = localStorage.getItem(LOCALSTORAGE_KEY);
     
-    parsedData = JSON.parse(savedData);
+    const parsedData = JSON.parse(savedData);
     if (savedData===null) {
          emailEl.value = "";
          messageEl.value = "";
