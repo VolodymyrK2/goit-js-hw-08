@@ -24,11 +24,11 @@ function handleInput(event) {
 }
 function handleSubmit(event) {
     event.preventDefault();
-        if (emailEl.value === '' || messageEl.value === '') {
-           return;
-        
-    }
-    console.log(localStorage.getItem(LOCALSTORAGE_KEY));
+    if (emailEl.value.trim() === '' || messageEl.value.trim() === '') {
+        alert("Please fill in all fields!");
+        return;
+      }
+    console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
     localStorage.removeItem(LOCALSTORAGE_KEY);
     
     formEl.reset;
